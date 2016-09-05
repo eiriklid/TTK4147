@@ -1,0 +1,21 @@
+1. Run the programs from assignments A and B with fork, vfork and threads.
+- What is the difference between fork and vfork?
+	- vfork suspends parent while chile process is running
+	-until child is terminated, it shares all memory, including stack with parent
+
+- How do POSIX threads handle local and global variables?
+	Local variable is incremented only by the thread running it, global varlables are incremented by all threads.
+
+2. Run the program from assignment C.
+- What happens with the threads that does not get access to a resource right away?
+	Waits
+- Are the resources shared fairly among the threads?
+	Nope
+3. Run the program from assignment D.
+- What happens when running the threads before adding a mutex, and why?
+	Incrementation on var1, but not var2.
+4. Run the program from assignment E.
+- How did the deadlock happen?
+	- All philosophers use one fork but never gets the other, thus never releasing the one fork they have
+- How did you solve it?
+- Can you think of other methods to solve it?
